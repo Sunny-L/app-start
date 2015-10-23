@@ -1,0 +1,36 @@
+{
+  "name": "frontend-startkit",
+  "version": "1.0.0",
+  "description": "static-server react wbpack gulp start",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "bin": {
+    "frontend-start": "./bin/frontend-start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunny-L/frontend-startkit.git"
+  },
+  "keywords": [
+    "server",
+    "react",
+    "gulp",
+    "webpack"
+  ],
+  "author": "Sunny-L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sunny-L/frontend-startkit/issues"
+  },
+  "homepage": "https://github.com/Sunny-L/frontend-startkit#readme",
+  "devDependencies": {
+    "commander": "^2.9.0",
+    "mkdirp": "^0.5.1",
+    "node-static": "^0.7.7"
+  },
+  "dependencies": {
+    "shelljs": "^0.5.3"
+  }
+}

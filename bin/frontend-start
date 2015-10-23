@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+var program = require('commander');
+var path = require('path');
+var fs = require('fs');
+var readline = require('readline');
+
+console.log('项目构建开始 ...')
+console.log(path)
+console.log('项目构建结束 ...')
+
+
+function mkdir(path,fn){
+    mkdirp(path,0755,function(err){
+        if(err) throw err;
+        console.log(err+path);
+        fn && fn();
+    })
+}
