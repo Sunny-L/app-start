@@ -37,7 +37,7 @@ function createApp(app_name,path){
         write('./index.js',app)
 
         write('./public/js/global.js')
-        write('./public/css/global.css)
+        write('./public/css/global.css')
         write('./public/less/global.less');
 
         var appname = process.argv[1].split('/');

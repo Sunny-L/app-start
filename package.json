@@ -1,13 +1,13 @@
 {
-  "name": "frontend-startkit",
-  "version": "1.0.0",
-  "description": "static-server react wbpack gulp start",
+  "name": "app-startkit",
+  "version": "1.0.1",
+  "description": "static-server react wbpack gulp",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "bin": {
-    "frontend-start": "./bin/frontend-start"
+    "app-start": "./bin/app-start"
   },
   "repository": {
     "type": "git",
