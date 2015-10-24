@@ -1,6 +1,6 @@
 {
   "name": "app-startkit",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "static-server react wbpack gulp",
   "main": "index.js",
   "scripts": {
@@ -31,6 +31,8 @@
     "node-static": "^0.7.7"
   },
   "dependencies": {
-    "shelljs": "^0.5.3"
+    "commander": "^2.9.0",
+    "mkdirp": "^0.5.1",
+    "node-static": "^0.7.7"
   }
 }

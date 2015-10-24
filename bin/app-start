@@ -5,10 +5,7 @@ var path = require('path');
 var fs = require('fs');
 var readline = require('readline');
 
-console.log('项目构建开始 ...')
-//console.log(process.argv.slice('2'))
 main();
-console.log('项目构建结束 ...')
 
 function main(){
     program
@@ -16,10 +13,14 @@ function main(){
       .option('-p,--port','port')
       .parse(process.argv)
     var destinationPath = '.';  //项目名称
+    console.log(program.args)
     createApp(destinationPath)
 }
 function createApp(app_name,path){
+
     mkdir(app_name,function(){
+        console.log('项目构建开始 ...')
+        console.log()
         mkdir(app_name+'/public');
         mkdir(app_name+'/public/js');
         mkdir(app_name+'/public/css');
@@ -27,6 +28,7 @@ function createApp(app_name,path){
         mkdir(app_name+'/public/static');
 
         var app = loadTemplate('./index.js');
+        if(program.port) app = app.replace('9000',program.args[0])
         var gulp = loadTemplate('./gulpfile.js');
         var webpack = loadTemplate('./webpack.config.js');
         var index = loadTemplate('./index.html');
@@ -38,7 +40,7 @@ function createApp(app_name,path){
 
         write('./public/js/global.js')
         write('./public/css/global.css')
-        write('./public/less/global.less');
+        write('./public/less/global.less')
 
         var appname = process.argv[1].split('/');
         appname =  appname[appname.length-1];
@@ -57,6 +59,12 @@ function createApp(app_name,path){
     })
 }
 
+var isFinish = 6;
+function finish(){
+    if(--isFinish) return;
+    console.log();
+    console.log('项目构建结束 ...')
+}
 
 function loadTemplate(name) {
   return fs.readFileSync(path.join(__dirname, '..', 'templates', name), 'utf-8');
@@ -72,5 +80,6 @@ function mkdir(path,fn){
         if(err) throw err;
         console.log('   \x1b[36mcreate\x1b[0m : '+path);
         fn && fn();
+        finish();
     })
 }
