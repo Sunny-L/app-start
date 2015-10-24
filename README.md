@@ -1,7 +1,7 @@
 ## 前端开发脚手架
 
-###1、静态服务器
-###2、React gulp webpack配置文件生成
+####1、静态服务器
+####2、React gulp webpack配置文件生成
 
 ##安装
     npm install -g app-startkit
@@ -12,4 +12,4 @@
     npm install
 
 ##参数
-    -p  //服务器监听商品号
+    -p  //服务器监听端口号
