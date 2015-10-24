@@ -5,5 +5,4 @@ require('http').createServer(function (request, response) {
     request.addListener('end', function () {
         fileServer.serve(request, response);
     }).resume();
-}).listen(9000);
-console.log('服务器监听在'+''+'端口...');
+}).listen(3000);
