@@ -1,6 +1,6 @@
 {
   "name": "app-start",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "static-server react wbpack gulp",
   "main": "index.js",
   "scripts": {

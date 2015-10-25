@@ -32,11 +32,13 @@ function createApp(app_name,path){
         var gulp = loadTemplate('./gulpfile.js');
         var webpack = loadTemplate('./webpack.config.js');
         var index = loadTemplate('./index.html');
+        var gitignore = loadTemplate('./.gitignore');
         write('./index.html',index)
         write('./index.js',app)
         write('./gulpfile.js',gulp)
         write('./webpack.config.js',webpack)
         write('./index.js',app)
+        write('./.gitignore',gitignore)
 
         write('./public/js/global.js')
         write('./public/css/global.css')
