@@ -51,7 +51,7 @@ function createApp(app_name,path){
             scripts: { start: 'node ./index' },
             dependencies: {
                 'node-static': "^0.7.7",
-              'serve-favicon': '~2.3.0'
+                'supervisor':'^0.9.1'
           }
         }
         pkg = JSON.stringify(pkg,null,4);

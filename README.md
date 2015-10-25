@@ -16,6 +16,7 @@ npm install -g app-start
 cd app
 app-start -p 9000
 npm install
+supervisor index.js     进程守护
 ```
 
 ## 参数
