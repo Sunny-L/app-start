@@ -20,7 +20,6 @@ function createApp(app_name,path){
 
     mkdir(app_name,function(){
         console.log('项目构建开始 ...')
-        console.log()
         mkdir(app_name+'/public');
         mkdir(app_name+'/public/js');
         mkdir(app_name+'/public/css');
