@@ -28,4 +28,4 @@ supervisor index.js     进程守护
 ## 编译运行
 
 ```bash
-gulp server
+gulp serve
