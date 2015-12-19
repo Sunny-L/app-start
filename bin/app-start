@@ -30,12 +30,14 @@ function createApp(app_name,path){
         if(program.port) app = app.replace('9000',program.args[0])
         var gulp = loadTemplate('./gulpfile.js');
         var webpack = loadTemplate('./webpack.config.js');
+        var webpack_dev = loadTemplate('./webpack-dev.config.js');
         var index = loadTemplate('./index.html');
         var gitignore = loadTemplate('./.gitignore');
         write('./index.html',index)
         write('./index.js',app)
         write('./gulpfile.js',gulp)
         write('./webpack.config.js',webpack)
+        write('./webpack-dev.config.js',webpack_dev)
         write('./index.js',app)
         write('./.gitignore',gitignore)
 
@@ -47,7 +49,7 @@ function createApp(app_name,path){
         appname =  appname[appname.length-1];
         var pkg = {
             name:appname,
-            version: '0.0.0',
+            version: '0.0.1',
             private: true,
             scripts: { start: 'node ./index' },
             dependencies: {
@@ -60,10 +62,9 @@ function createApp(app_name,path){
     })
 }
 
-var isFinish = 6;
+var isFinish = 7;
 function finish(){
     if(--isFinish) return;
-    console.log();
     console.log('项目构建结束 ...')
 }
 

@@ -22,5 +22,10 @@ supervisor index.js     进程守护
 ## 参数
 
 ```bash
--p  //服务器监听端口号  默认9000端口
+-p  //服务器监听端口号  默认8000端口
 ```
+
+## 编译运行
+
+```bash
+gulp server
