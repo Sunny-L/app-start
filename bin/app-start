@@ -32,7 +32,7 @@ function createApp(app_name,path){
         var webpack = loadTemplate('./webpack.config.js');
         var webpack_dev = loadTemplate('./webpack-dev.config.js');
         var index = loadTemplate('./index.html');
-        var gitignore = loadTemplate('./.gitignore');
+        var gitignore = loadTemplate('./a.gitignore');
         write('./index.html',index)
         write('./index.js',app)
         write('./gulpfile.js',gulp)
@@ -62,7 +62,7 @@ function createApp(app_name,path){
     })
 }
 
-var isFinish = 7;
+var isFinish = 6;
 function finish(){
     if(--isFinish) return;
     console.log('项目构建结束 ...')
